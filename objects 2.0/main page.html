@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="node_modules/swup/dist/swup.min.js"></script>
+    <script defer src="swupjs.js"></script>
+    <title>Main</title>
+    <link rel="stylesheet" href="https://use.typekit.net/yfn5brs.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+</head>
+<body style="background-color:#e6e4e4;">
+<div id="canvas"></div>
+<nav>
+    <ul>
+<h3 style="top: 39%; right: 42%;">Relic</h3>
+<div class="main-menu">
+<a class="font-button" href="/objects.html">Objects</a>
+<a class="font-button">Connections</a>
+<a class="font-button" href="/formation.html">Formation</a>
+</div>
+    </ul>
+</nav>
+<main id="swup" class="transition-fade"></main>
+<script src="three.js"></script>
+<script type="module" src ="GLTFLoader.js"></script>
+<script type="module">
+    import {GLTFLoader} from "./GLTFLoader.js";
+    import {OrbitControls} from "./OrbitControls.js";
+    var obj, render, renderer, camera, scene, canvas, controls;
+    
+    init();
+    
+    animate();
+    
+    
+    
+    function init(){
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth/window.innerHeight,
+        .01,
+        1000
+    );
+    camera.position.set(0, 0.08, 2.5);
+    // camera.updateProjectionMatrix();
+    canvas = document.getElementById("canvas");
+    document.body.appendChild(canvas)
+    renderer = new THREE.WebGLRenderer( { alpha: true } );
+    renderer.setPixelRatio(devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor( 0x000000, 0 );
+    canvas.appendChild(renderer.domElement);
+    
+    var loader = new GLTFLoader();
+
+    var gltfList = [
+        "betonada v.gltf",
+        "beads V.gltf",
+        "baton v.gltf",
+        "bagel v.gltf",
+        "stun v.gltf",
+        "metal barrier v.gltf",
+        "metal detector v.gltf",
+
+    ];
+    var randIndex = THREE.MathUtils.randInt(0, gltfList.length - 1);
+    var randGltf = loader.load(gltfList[randIndex], function(gltf){
+        obj = gltf.scene;
+        obj.scale.set(0.011,0.011,0.011);
+        obj.position.set(-0.19,-0.19,-0.19);
+        scene.add(gltf.scene);
+    });
+    controls = new OrbitControls(camera, renderer.domElement)
+    controls.enableDamping=true;
+    controls.enableZoom=false;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 1.7;
+    // scene.background = new THREE.Color(0Xe6e4e4)
+    var light = new THREE.PointLight( 0xf6f3f3, 2, 90, 2 );
+    light.position.set( 20, 10, 15 );
+    scene.add(light);
+    };
+    
+    function setAnotherTexture(img) {
+       
+//            var textureColor = document.getElementById("colorOption").value;
+        var textureLoader = new THREE.TextureLoader();
+
+        var newTexture = textureLoader.load( "textures/"+img);
+
+        newTexture.encoding = THREE.sRGBEncoding;
+        newTexture.flipY = false;
+
+ 
+                //create a global var to reference later when changing textures
+                //apply texture
+
+ obj.traverse( function ( child ) {
+    
+    if (child.type === 'Mesh') {
+        //create a global var to reference later when changing textures
+        //apply texture
+         
+        child.material.map = newTexture;
+        child.material.needsUpdate = true;
+        child.material.map.needsUpdate = true;
+
+    }
+})
+    };
+    
+    
+    function animate(){
+        
+        requestAnimationFrame(animate);
+        renderer.render(scene,camera);
+        
+        controls.update();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="node_modules/swup/dist/swup.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Objects</title>
+    <link rel="stylesheet" href="https://use.typekit.net/yfn5brs.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+    <script src="dropdownjs.js" defer></script>
+    <script src="history list.js" defer></script>
+</head>
+<body style="background-color:#e6e4e4;">
+    <div class="main-menu">
+        
+        <a class="font-button-back" href="/main page.html"><span>Objects</span></a>
+        <a class="font-button">Connections</a>
+        <a class="font-button" href="/formation.html">Formation</a>
+        </div>
+    <div class="filterbar">
+            <li style="display:inline">
+                <div class="dropdown">
+                    <a class= "font-filter" tabindex="0">Catagory</a>
+                    <div class="dropdown-menu" tabindex="1">
+                        <ul>
+                            <li><a class="font-sub" href="#" >Food</a></li>
+                            <li><a class="font-sub" href="#" >Security</a></li>
+                            <li><a class="font-sub" href="#" >Stones</a></li>
+                            <li><a class="font-sub" href="#" >Religion</a></li>
+                            <li><a class="font-sub" href="#" >Signs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li style="display:inline">
+                <div class="dropdown">
+                    <a class= "font-filter" tabindex="0">Weight</a>
+                    <div class="dropdown-menu" tabindex="1">
+                        <ul>
+                            <li><a class="font-sub" href="#" >Gram</a></li>
+                            <li><a class="font-sub" href="#" >Kilo</a></li>
+                            <li><a class="font-sub" href="#" >Ton</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li style="display:inline">
+                <div class="dropdown">
+                    <a class= "font-filter" tabindex="0">Materials</a>
+                    <div class="dropdown-menu" tabindex="1">
+                        <ul>
+                            <li><a class="font-sub" href="#">Metal</a></li>
+                            <li><a class="font-sub" href="#">Concrete</a></li>
+                            <li><a class="font-sub" href="#">Stone</a></li>
+                            <li><a class="font-sub" href="#">Organic</a></li>
+                            <li><a class="font-sub" href="#">Liquid</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li style="display:inline">
+                <div class="dropdown">
+                    <a class= "font-filter" tabindex="0">Origins</a>
+                    <div class="dropdown-menu" tabindex="1">
+                        <ul>
+                            <li><a class="font-sub" href="#">Palastinian</a></li>
+                            <li><a class="font-sub" href="#">Israeli</a></li>
+                            <li><a class="font-sub" href="#">American</a></li>
+                            <li><a class="font-sub" href="#">Jewish</a></li>
+                            <li><a class="font-sub" href="#">Muslim</a></li>
+                            <li><a class="font-sub" href="#">Christian</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </div>
+        <div class="container-history">
+            <ul id="container-list">
+            </ul>
+        </div>
+
+        <div class="container-objects">
+            
+        </div>
+        <script>
+            $(document).ready(function(){
+
+            
+            let filters =[];
+            filterItems();
+
+            $(document).on('click', ".x-span", function(){
+                
+                const text = $(this).parent().clone().children().remove().end().text();
+                // console.log(text);
+                
+                $("#sub-"+text).removeClass("clicked");
+                $(this).parent().remove();
+                const index = filters.indexOf(text);
+                
+                filters.splice(index,1);
+                filterItems();
+                
+                
+            })
+
+            $(".font-sub").click(function(){
+                
+                let text = $(this).text();
+               
+                $(this).attr("id","sub-"+text);
+                const  li = $("#container-list").append($("<li>", {id:'li-'+ text}).html(text));
+           
+                $("#sub-"+text).addClass("clicked");
+                $("#sub-"+text).click(false);
+                $("#li-"+text).append("<span class='x-span'>x</span></li>");
+                filters.push(text);
+                console.log(filters);
+                filterItems();
+            });
+
+
+            function filterItems(){
+                let d;
+                imgData.forEach(function(img){
+                    const par = img.parameters;
+                    img.flag = true;
+                    for (let i=0; i< filters.length; i++){
+                        
+                        if(!par.includes(filters[i])){
+                            img.flag = false;
+                        
+                        }
+                        
+                    }
+                    d = $.grep(imgData, function(n, i){
+                        return n.flag === true;
+                    })
+
+                })
+            
+
+                console.log(d);
+                $(".container-objects").empty();
+                d.forEach(function(obj){
+                    const img = obj.src;
+                    const href = obj.href;
+                    $(".container-objects").append('<a class="objImg" href="' +href+'"><img src="' +img+'"></a>');
+                }
+                
+                
+                )
+
+                }
+
+           
+                // const text = $(this).parent.text();
+                
+                // const  mainListItem = $("#container-list").append($("<li>", {id:'li-'+ text}).html(text));
+                // if (!li.includes(text)) {
+                //     li.push(text);
+                // }
+                
+                
+                // $("#li-"+text).append("<span class='container-history ul li span'>x</span>"); 
+            })
+
+            let imgData = [
+                {src:"imgs/stun.png", href:"/Stungrenade.html", parameters:['Security', 'Metal', 'Gram', 'Israeli', 'American'], flag:true},
+                {src:"imgs/rock.png", href:"/jerusalem stone.html", parameters:['Stones','Stone', 'Kilo', 'Israeli', 'Palastinian', 'Jewish', 'Muslim', 'Christian'], flag:true},
+                {src:"imgs/betonada.png", href:"/betonada.html", parameters:['Stones', 'Security', 'Israeli', 'Concrete', 'Metal', 'Ton' ], flag: true},
+                {src:"imgs/Law sign.png", href:"/law sign.html", parameters:['Signs', 'Israeli', 'Metal', 'Kilo' ], flag: true},
+                {src:"imgs/beads.png", href:"/beads.html", parameters:['Religion', 'Israeli', 'Organic', 'Gram', 'Palastinian', 'Muslim' ], flag: true},
+                {src:"imgs/metal barrier.png", href:"/metal barrier.html", parameters:['Security', 'Israeli', 'Metal', 'Kilo' ], flag: true},
+                {src:"imgs/metal detector.png", href:"/metal detector.html", parameters:['Security', 'Israeli','American', 'Metal', 'Gram' ], flag: true},
+                {src:"imgs/baton.png", href:"/baton.html", parameters:['Security', 'Israeli','American', 'Metal', 'Gram' ], flag: true},
+                {src:"imgs/bagel.png", href:"/bagel.html", parameters:['Food', 'Palastinian', 'Organic', 'Gram' ], flag: true},
+
+            ]
+            // reducedFilter()
+        </script>
+</body>
+</html>

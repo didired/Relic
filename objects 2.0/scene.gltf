@@ -1,0 +1,597 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1364,
+      "max": [
+        -0.7287080883979797,
+        6.776275634765625,
+        5.188630104064941
+      ],
+      "min": [
+        -6.829198837280273,
+        1.0026196241378784,
+        -0.6616097688674927
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 16368,
+      "componentType": 5126,
+      "count": 1364,
+      "max": [
+        0.9996993541717529,
+        0.9998375773429871,
+        0.999164879322052
+      ],
+      "min": [
+        -0.9996660947799683,
+        -0.9999974370002747,
+        -0.9993349313735962
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1364,
+      "max": [
+        0.9985657334327698,
+        0.9987187385559082,
+        0.9999964237213135,
+        1.0
+      ],
+      "min": [
+        -0.9986951351165771,
+        -0.9957667589187622,
+        -0.9978736639022827,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1364,
+      "max": [
+        0.9947376847267151,
+        0.9975239038467407
+      ],
+      "min": [
+        0.6709656119346619,
+        0.0024761557579040527
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 6858,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 32736,
+      "componentType": 5126,
+      "count": 6541,
+      "max": [
+        -0.39350250363349915,
+        7.52187442779541,
+        3.102726697921753
+      ],
+      "min": [
+        -5.4860968589782715,
+        -9.999999046325684,
+        -2.940213918685913
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 111228,
+      "componentType": 5126,
+      "count": 6541,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 21824,
+      "componentType": 5126,
+      "count": 6541,
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 10912,
+      "componentType": 5126,
+      "count": 6541,
+      "max": [
+        0.993024468421936,
+        0.9936934113502502
+      ],
+      "min": [
+        0.002493143081665039,
+        0.002476632595062256
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 27432,
+      "componentType": 5125,
+      "count": 15174,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 189720,
+      "componentType": 5126,
+      "count": 2389,
+      "max": [
+        -1.5910074710845947,
+        7.575780391693115,
+        4.174641132354736
+      ],
+      "min": [
+        -4.288590908050537,
+        -5.369836807250977,
+        -2.2434325218200684
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 218388,
+      "componentType": 5126,
+      "count": 2389,
+      "max": [
+        1.0,
+        1.0,
+        0.9999988079071045
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 126480,
+      "componentType": 5126,
+      "count": 2389,
+      "max": [
+        1.0,
+        1.0,
+        0.9999960064888,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.9999961256980896,
+        -0.9995468854904175,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 63240,
+      "componentType": 5126,
+      "count": 2389,
+      "max": [
+        0.9975067973136902,
+        0.9686342477798462
+      ],
+      "min": [
+        0.019473254680633545,
+        0.0024817585945129395
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 88128,
+      "componentType": 5125,
+      "count": 4527,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 247056,
+      "componentType": 5126,
+      "count": 876,
+      "max": [
+        -0.9918872117996216,
+        7.275842666625977,
+        0.5070868134498596
+      ],
+      "min": [
+        -8.123351097106934,
+        3.3980307579040527,
+        -4.51855993270874
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 257568,
+      "componentType": 5126,
+      "count": 876,
+      "max": [
+        0.9953120946884155,
+        0.9991154670715332,
+        0.999922513961792
+      ],
+      "min": [
+        -0.9987097978591919,
+        -0.9992939829826355,
+        -0.9997923374176025
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 164704,
+      "componentType": 5126,
+      "count": 876,
+      "max": [
+        0.9999629855155945,
+        0.9916189908981323,
+        0.9995526671409607,
+        1.0
+      ],
+      "min": [
+        -0.9964462518692017,
+        -0.9999552965164185,
+        -0.9980777502059937,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 82352,
+      "componentType": 5126,
+      "count": 876,
+      "max": [
+        0.9951420426368713,
+        0.7660929560661316
+      ],
+      "min": [
+        0.34929603338241577,
+        0.002482116222381592
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 106236,
+      "componentType": 5125,
+      "count": 4200,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "ArtGare (https://sketchfab.com/artgare)",
+      "license": "SKETCHFAB Standard (https://sketchfab.com/licenses)",
+      "source": "https://sketchfab.com/3d-models/10014-m84-stun-grenade-a31bc5610fbd4e0895185f99ae2cea88",
+      "title": "10014 - M84 Stun Grenade"
+    },
+    "generator": "Sketchfab-12.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 123036,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 89360,
+      "byteOffset": 123036,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 268080,
+      "byteOffset": 212396,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 178720,
+      "byteOffset": 480476,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 659196,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/material_stunGrenade_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/material_stunGrenade_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/material_stunGrenade_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "material_stunGrenade",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.24491697523545472,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "mesh_StunGrenade_SafetyPin_material_stunGrenade_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "mesh_StunGrenade_Body_material_stunGrenade_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "mesh_StunGrenade_Handle_material_stunGrenade_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "mesh_StunGrenade_SecondaryPin_material_stunGrenade_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 16,
+            "POSITION": 15,
+            "TANGENT": 17,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.9999895095825195,
+        -1.5979412910676355e-16,
+        -0.004585264250636101,
+        0.0,
+        -0.004585264250636101,
+        3.8285453788019927e-16,
+        -0.9999895095825195,
+        0.0,
+        1.6154793688024288e-16,
+        1.0,
+        3.8211781773943505e-16,
+        0.0,
+        -1.5501123925787397e-05,
+        1.3417632092737306e-20,
+        -6.042764289304614e-05,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "7b418496e32d4be3bbf22be5fc69d2b8.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        6,
+        8,
+        10
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        2.9397993087768555,
+        9.999998092651367,
+        3.7781055652885698e-06,
+        1.0
+      ],
+      "name": "M84_Stun_Grenade"
+    },
+    {
+      "children": [
+        5
+      ],
+      "name": "mesh_StunGrenade_SafetyPin"
+    },
+    {
+      "mesh": 0,
+      "name": "mesh_StunGrenade_SafetyPin_material_stunGrenade_0"
+    },
+    {
+      "children": [
+        7
+      ],
+      "name": "mesh_StunGrenade_Body"
+    },
+    {
+      "mesh": 1,
+      "name": "mesh_StunGrenade_Body_material_stunGrenade_0"
+    },
+    {
+      "children": [
+        9
+      ],
+      "name": "mesh_StunGrenade_Handle"
+    },
+    {
+      "mesh": 2,
+      "name": "mesh_StunGrenade_Handle_material_stunGrenade_0"
+    },
+    {
+      "children": [
+        11
+      ],
+      "name": "mesh_StunGrenade_SecondaryPin"
+    },
+    {
+      "mesh": 3,
+      "name": "mesh_StunGrenade_SecondaryPin_material_stunGrenade_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

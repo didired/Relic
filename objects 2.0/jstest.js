@@ -1,0 +1,1 @@
+console.log(THREE.MathUtils.randInt(1, 10))
